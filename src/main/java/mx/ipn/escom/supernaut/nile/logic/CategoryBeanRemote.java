@@ -13,5 +13,5 @@ import mx.ipn.escom.supernaut.nile.model.Category;
  */
 @Remote
 public interface CategoryBeanRemote extends
-    AbstractBeanRemote<Integer, Category> {
+    AbstractBeanInterface<Integer, Category> {
 }

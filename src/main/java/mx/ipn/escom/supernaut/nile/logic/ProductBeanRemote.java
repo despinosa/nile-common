@@ -12,6 +12,6 @@ import mx.ipn.escom.supernaut.nile.model.Product;
  * @author supernaut
  */
 @Remote
-public interface ProductBeanRemote extends AbstractBeanRemote<Integer, Product> {
+public interface ProductBeanRemote extends AbstractBeanInterface<Integer, Product> {
 
 }

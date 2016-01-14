@@ -14,7 +14,7 @@ import mx.ipn.escom.supernaut.nile.model.Order;
  */
 @Remote
 public interface CustomerBeanRemote extends
-    AbstractBeanRemote<Integer, Customer> {
+    AbstractBeanInterface<Integer, Customer> {
 
   public void initByUsername(String username);
 

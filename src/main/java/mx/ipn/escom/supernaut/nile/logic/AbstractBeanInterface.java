@@ -12,7 +12,7 @@ import java.util.List;
  * @param <PK>
  * @param <Model>
  */
-public interface AbstractBeanRemote<PK, Model> {
+public interface AbstractBeanInterface<PK, Model> {
 
   public void initByPK(PK pk);
 
@@ -22,7 +22,7 @@ public interface AbstractBeanRemote<PK, Model> {
 
   public Model getModel() throws IllegalStateException;
 
-  public void deleteModel() throws IllegalStateException;
+  public void deleteModel(PK pk);
 
   public void commitModel() throws IllegalStateException;
 
