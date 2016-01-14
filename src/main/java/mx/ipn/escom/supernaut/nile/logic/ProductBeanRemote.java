@@ -4,9 +4,7 @@
  */
 package mx.ipn.escom.supernaut.nile.logic;
 
-import java.util.List;
 import javax.ejb.Remote;
-import mx.ipn.escom.supernaut.nile.model.Category;
 import mx.ipn.escom.supernaut.nile.model.Product;
 
 /**

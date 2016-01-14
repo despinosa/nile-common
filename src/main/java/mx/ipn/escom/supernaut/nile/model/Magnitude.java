@@ -10,20 +10,46 @@ import java.util.Collection;
  *
  * @author supernaut
  */
-public interface Magnitude {
+public class Magnitude {
 
-  Collection getAttributeCollection();
+  private Collection<? extends Attribute> attributeCollection;
+  private String description;
+  private Short magniId;
+  private String name;
+  private Collection<? extends Unit> unitCollection;
 
-  String getDescription();
+  public Magnitude() {}
 
-  Short getMagniId();
+  public Collection<? extends Attribute> getAttributeCollection() {
+    return attributeCollection;
+  }
 
-  String getName();
+  public String getDescription() {
+    return description;
+  }
 
-  Collection getUnitCollection();
+  public Short getMagniId() {
+    return magniId;
+  }
 
-  void setDescription(String description);
+  public String getName() {
+    return name;
+  }
 
-  void setName(String name);
+  public Collection<? extends Unit> getUnitCollection() {
+    return unitCollection;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public void setMagniId(Short magniId) {
+    this.magniId = magniId;
+  }
 
 }

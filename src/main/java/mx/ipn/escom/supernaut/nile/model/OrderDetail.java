@@ -9,16 +9,41 @@ package mx.ipn.escom.supernaut.nile.model;
  *
  * @author supernaut
  */
-public interface OrderDetail {
+public class OrderDetail {
 
-  Order getOrder1();
+  private Order order1;
+  private OrderDetailPK orderDetailPK;
+  private Product product1;
+  private short quantity;
 
-  OrderDetailPK getOrderDetailPK();
+  public OrderDetail() {}
 
-  Product getProduct1();
+  public Order getOrder1() {
+    return order1;
+  }
 
-  short getQuantity();
+  public OrderDetailPK getOrderDetailPK() {
+    return orderDetailPK;
+  }
 
-  void setQuantity(short quantity);
+  public Product getProduct1() {
+    return product1;
+  }
+
+  public short getQuantity() {
+    return quantity;
+  }
+
+  public void setQuantity(short quantity) {
+    this.quantity = quantity;
+  }
+
+  public void setOrder1(Order order1) {
+    this.order1 = order1;
+  }
+
+  public void setProduct1(Product product1) {
+    this.product1 = product1;
+  }
 
 }

@@ -11,38 +11,91 @@ import java.util.Date;
  *
  * @author supernaut
  */
-public interface Customer {
+public class Customer {
 
-  Date getAddedOn();
+  private Date addedOn;
+  private Collection<? extends Address> addressCollection;
+  private Integer customerId;
+  private String firstName;
+  private Date lastLogin;
+  private String lastName;
+  private Collection<? extends Order> orderCollection;
+  private String pwordHash;
+  private String pwordSalt;
+  private String username;
 
-  Collection getAddressCollection();
+  public Customer() {}
 
-  Integer getCustomerId();
+  public Date getAddedOn() {
+    return addedOn;
+  }
 
-  String getFirstName();
+  public Collection<? extends Address> getAddressCollection() {
+    return addressCollection;
+  }
 
-  Date getLastLogin();
+  public Integer getCustomerId() {
+    return customerId;
+  }
 
-  String getLastName();
+  public String getFirstName() {
+    return firstName;
+  }
 
-  Collection getOrderCollection();
+  public Date getLastLogin() {
+    return lastLogin;
+  }
 
-  String getPwordHash();
+  public String getLastName() {
+    return lastName;
+  }
 
-  String getPwordSalt();
+  public Collection<? extends Order> getOrderCollection() {
+    return orderCollection;
+  }
 
-  String getUsername();
+  public String getPwordHash() {
+    return pwordHash;
+  }
 
-  void setFirstName(String firstName);
+  public String getPwordSalt() {
+    return pwordSalt;
+  }
 
-  void setLastLogin(Date lastLogin);
+  public String getUsername() {
+    return username;
+  }
 
-  void setLastName(String lastName);
+  public void setFirstName(String firstName) {
+    this.firstName = firstName;
+  }
 
-  void setPwordHash(String pwordHash);
+  public void setLastLogin(Date lastLogin) {
+    this.lastLogin = lastLogin;
+  }
 
-  void setPwordSalt(String pwordSalt);
+  public void setLastName(String lastName) {
+    this.lastName = lastName;
+  }
 
-  void setUsername(String username);
+  public void setPwordHash(String pwordHash) {
+    this.pwordHash = pwordHash;
+  }
+
+  public void setPwordSalt(String pwordSalt) {
+    this.pwordSalt = pwordSalt;
+  }
+
+  public void setUsername(String username) {
+    this.username = username;
+  }
+
+  public void setAddedOn(Date addedOn) {
+    this.addedOn = addedOn;
+  }
+
+  public void setCustomerId(Integer customerId) {
+    this.customerId = customerId;
+  }
 
 }

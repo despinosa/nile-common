@@ -10,28 +10,69 @@ import java.util.Collection;
  *
  * @author supernaut
  */
-public interface Unit {
+public class Unit {
 
-  String getAbbreviation();
+  private String abbreviation;
+  private Collection<? extends CategoryDetail> categoryDetailCollection;
+  private String description;
+  private Magnitude magnitude;
+  private String name;
+  private boolean shownAsPrefix;
+  private UnitPK unitPK;
 
-  Collection getCategoryDetailCollection();
+  public Unit() {}
 
-  String getDescription();
+  public String getAbbreviation() {
+    return abbreviation;
+  }
 
-  Magnitude getMagnitude();
+  public Collection<? extends CategoryDetail> getCategoryDetailCollection() {
+    return categoryDetailCollection;
+  }
 
-  String getName();
+  public String getDescription() {
+    return description;
+  }
 
-  boolean getShownAsPrefix();
+  public Magnitude getMagnitude() {
+    return magnitude;
+  }
 
-  UnitPK getUnitPK();
+  public String getName() {
+    return name;
+  }
 
-  void setAbbreviation(String abbreviation);
+  public boolean getShownAsPrefix() {
+    return shownAsPrefix;
+  }
 
-  void setDescription(String description);
+  public UnitPK getUnitPK() {
+    return unitPK;
+  }
 
-  void setName(String name);
+  public void setAbbreviation(String abbreviation) {
+    this.abbreviation = abbreviation;
+  }
 
-  void setShownAsPrefix(boolean shownAsPrefix);
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public void setMagnitude(Magnitude magnitude) {
+    this.magnitude = magnitude;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public void setShownAsPrefix(boolean shownAsPrefix) {
+    this.shownAsPrefix = shownAsPrefix;
+  }
+
+  public void setUnitPK(UnitPK unitPK) {
+    this.unitPK = unitPK;
+  }
 
 }

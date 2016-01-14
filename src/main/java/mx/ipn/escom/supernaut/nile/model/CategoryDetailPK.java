@@ -8,10 +8,27 @@ package mx.ipn.escom.supernaut.nile.model;
  *
  * @author supernaut
  */
-public interface CategoryDetailPK {
+public class CategoryDetailPK {
 
-    int getAttribute();
+  private int attribute;
+  private short category;
 
-    short getCategory();
+  public CategoryDetailPK() {}
+
+  public int getAttribute() {
+    return attribute;
+  }
+
+  public short getCategory() {
+    return category;
+  }
+
+  public void setAttribute(int attribute) {
+    this.attribute = attribute;
+  }
+
+  public void setCategory(short category) {
+    this.category = category;
+  }
 
 }

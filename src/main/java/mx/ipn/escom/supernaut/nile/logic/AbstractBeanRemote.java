@@ -24,4 +24,6 @@ public interface AbstractBeanRemote<PK, Model> {
 
   public void deleteModel() throws IllegalStateException;
 
+  public void commitModel() throws IllegalStateException;
+
 }

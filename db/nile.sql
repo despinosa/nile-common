@@ -19,6 +19,9 @@ USE `nile` ;
 -- -----------------------------------------------------
 -- Table `nile`.`Product`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `nile`.`Product` ;
+
+SHOW WARNINGS;
 CREATE TABLE IF NOT EXISTS `nile`.`Product` (
   `sku` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(50) NOT NULL,
@@ -35,8 +38,11 @@ SHOW WARNINGS;
 -- -----------------------------------------------------
 -- Table `nile`.`Customer`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `nile`.`Customer` ;
+
+SHOW WARNINGS;
 CREATE TABLE IF NOT EXISTS `nile`.`Customer` (
-  `customer_id` INT UNSIGNED NOT NULL,
+  `customer_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(50) NOT NULL,
   `first_name` VARCHAR(100) NOT NULL,
   `last_name` VARCHAR(100) NOT NULL,
@@ -53,6 +59,9 @@ SHOW WARNINGS;
 -- -----------------------------------------------------
 -- Table `nile`.`Order`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `nile`.`Order` ;
+
+SHOW WARNINGS;
 CREATE TABLE IF NOT EXISTS `nile`.`Order` (
   `customer` INT UNSIGNED NOT NULL,
   `order_id` SMALLINT UNSIGNED NOT NULL,
@@ -74,6 +83,9 @@ SHOW WARNINGS;
 -- -----------------------------------------------------
 -- Table `nile`.`Category`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `nile`.`Category` ;
+
+SHOW WARNINGS;
 CREATE TABLE IF NOT EXISTS `nile`.`Category` (
   `category_id` SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(100) NOT NULL,
@@ -86,6 +98,9 @@ SHOW WARNINGS;
 -- -----------------------------------------------------
 -- Table `nile`.`Magnitude`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `nile`.`Magnitude` ;
+
+SHOW WARNINGS;
 CREATE TABLE IF NOT EXISTS `nile`.`Magnitude` (
   `magni_id` SMALLINT UNSIGNED NOT NULL,
   `name` VARCHAR(50) NOT NULL,
@@ -98,6 +113,9 @@ SHOW WARNINGS;
 -- -----------------------------------------------------
 -- Table `nile`.`Attribute`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `nile`.`Attribute` ;
+
+SHOW WARNINGS;
 CREATE TABLE IF NOT EXISTS `nile`.`Attribute` (
   `attribute_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(100) NOT NULL,
@@ -117,6 +135,9 @@ SHOW WARNINGS;
 -- -----------------------------------------------------
 -- Table `nile`.`ProductCategory`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `nile`.`ProductCategory` ;
+
+SHOW WARNINGS;
 CREATE TABLE IF NOT EXISTS `nile`.`ProductCategory` (
   `product` INT UNSIGNED NOT NULL,
   `category` SMALLINT UNSIGNED NOT NULL,
@@ -139,6 +160,9 @@ SHOW WARNINGS;
 -- -----------------------------------------------------
 -- Table `nile`.`Unit`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `nile`.`Unit` ;
+
+SHOW WARNINGS;
 CREATE TABLE IF NOT EXISTS `nile`.`Unit` (
   `magni` SMALLINT UNSIGNED NOT NULL,
   `unit_id` SMALLINT UNSIGNED NOT NULL,
@@ -160,6 +184,9 @@ SHOW WARNINGS;
 -- -----------------------------------------------------
 -- Table `nile`.`CategoryDetail`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `nile`.`CategoryDetail` ;
+
+SHOW WARNINGS;
 CREATE TABLE IF NOT EXISTS `nile`.`CategoryDetail` (
   `category` SMALLINT UNSIGNED NOT NULL,
   `attribute` INT UNSIGNED NOT NULL,
@@ -190,6 +217,9 @@ SHOW WARNINGS;
 -- -----------------------------------------------------
 -- Table `nile`.`ProductDetail`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `nile`.`ProductDetail` ;
+
+SHOW WARNINGS;
 CREATE TABLE IF NOT EXISTS `nile`.`ProductDetail` (
   `product` INT UNSIGNED NOT NULL,
   `attribute` INT UNSIGNED NOT NULL,
@@ -213,6 +243,9 @@ SHOW WARNINGS;
 -- -----------------------------------------------------
 -- Table `nile`.`Address`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `nile`.`Address` ;
+
+SHOW WARNINGS;
 CREATE TABLE IF NOT EXISTS `nile`.`Address` (
   `customer` INT UNSIGNED NOT NULL,
   `type` ENUM('envío', 'facturación') NOT NULL,
@@ -234,6 +267,9 @@ SHOW WARNINGS;
 -- -----------------------------------------------------
 -- Table `nile`.`OrderDetail`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `nile`.`OrderDetail` ;
+
+SHOW WARNINGS;
 CREATE TABLE IF NOT EXISTS `nile`.`OrderDetail` (
   `customer` INT UNSIGNED NOT NULL,
   `order` SMALLINT UNSIGNED NOT NULL,
@@ -263,6 +299,9 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 USE `nile`;
 
 DELIMITER $$
+
+USE `nile`$$
+DROP TRIGGER IF EXISTS `nile`.`CategoryDetail_BEFORE_INSERT` $$
 SHOW WARNINGS$$
 USE `nile`$$
 CREATE DEFINER = CURRENT_USER TRIGGER `nile`.`CategoryDetail_BEFORE_INSERT` BEFORE INSERT ON `CategoryDetail` FOR EACH ROW
@@ -274,6 +313,9 @@ CREATE DEFINER = CURRENT_USER TRIGGER `nile`.`CategoryDetail_BEFORE_INSERT` BEFO
 	END;$$
 
 SHOW WARNINGS$$
+
+USE `nile`$$
+DROP TRIGGER IF EXISTS `nile`.`CategoryDetail_BEFORE_UPDATE` $$
 SHOW WARNINGS$$
 USE `nile`$$
 CREATE DEFINER = CURRENT_USER TRIGGER `nile`.`CategoryDetail_BEFORE_UPDATE` BEFORE UPDATE ON `CategoryDetail` FOR EACH ROW

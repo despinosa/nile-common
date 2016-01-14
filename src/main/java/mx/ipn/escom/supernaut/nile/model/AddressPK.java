@@ -8,10 +8,27 @@ package mx.ipn.escom.supernaut.nile.model;
  *
  * @author supernaut
  */
-public interface AddressPK {
+public class AddressPK {
 
-  int getCustomer();
+  private int customer;
+  private String type;
 
-  String getType();
+  public AddressPK() {}
+
+  public int getCustomer() {
+    return customer;
+  }
+
+  public String getType() {
+    return type;
+  }
+
+  public void setCustomer(int customer) {
+    this.customer = customer;
+  }
+
+  public void setType(String type) {
+    this.type = type;
+  }
 
 }

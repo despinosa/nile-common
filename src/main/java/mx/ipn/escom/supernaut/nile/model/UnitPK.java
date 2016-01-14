@@ -8,10 +8,27 @@ package mx.ipn.escom.supernaut.nile.model;
  *
  * @author supernaut
  */
-public interface UnitPK {
+public class UnitPK {
 
-    short getMagni();
+  private short magni;
+  private short unitId;
 
-    short getUnitId();
+  public UnitPK() {}
+
+  public short getMagni() {
+    return magni;
+  }
+
+  public short getUnitId() {
+    return unitId;
+  }
+
+  public void setMagni(short magni) {
+    this.magni = magni;
+  }
+
+  public void setUnitId(short unitId) {
+    this.unitId = unitId;
+  }
 
 }

@@ -12,36 +12,88 @@ import java.util.Date;
  *
  * @author supernaut
  */
-public interface Product {
+public class Product {
 
-  Date getAddedOn();
+  private Date addedOn;
+  private Collection<? extends Category> categoryCollection;
+  private String description;
+  private byte[] image;
+  private String name;
+  private Collection<? extends OrderDetail> orderDetailCollection;
+  private BigDecimal price;
+  private Collection<? extends ProductDetail> productDetailCollection;
+  private Integer sku;
+  private int stock;
 
-  Collection getCategoryCollection();
+  public Product() {}
 
-  String getDescription();
+  public Date getAddedOn() {
+    return addedOn;
+  }
 
-  byte[] getImage();
+  public Collection<? extends Category> getCategoryCollection() {
+    return categoryCollection;
+  }
 
-  String getName();
+  public String getDescription() {
+    return description;
+  }
 
-  Collection getOrderDetailCollection();
+  public byte[] getImage() {
+    return image;
+  }
 
-  BigDecimal getPrice();
+  public String getName() {
+    return name;
+  }
 
-  Collection getProductDetailCollection();
+  public Collection<? extends OrderDetail> getOrderDetailCollection() {
+    return orderDetailCollection;
+  }
 
-  Integer getSku();
+  public BigDecimal getPrice() {
+    return price;
+  }
 
-  int getStock();
+  public Collection<? extends ProductDetail> getProductDetailCollection() {
+    return productDetailCollection;
+  }
 
-  void setDescription(String description);
+  public Integer getSku() {
+    return sku;
+  }
 
-  void setImage(byte[] image);
+  public int getStock() {
+    return stock;
+  }
 
-  void setName(String name);
+  public void setAddedOn(Date addedOn) {
+    this.addedOn = addedOn;
+  }
 
-  void setPrice(BigDecimal price);
 
-  void setStock(int stock);
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public void setImage(byte[] image) {
+    this.image = image;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public void setPrice(BigDecimal price) {
+    this.price = price;
+  }
+
+  public void setSku(Integer sku) {
+    this.sku = sku;
+  }
+
+  public void setStock(int stock) {
+    this.stock = stock;
+  }
 
 }

@@ -12,32 +12,77 @@ import java.util.Date;
  *
  * @author supernaut
  */
-public interface Order {
+public class Order {
 
-  Date getClosedOn();
+  private Date closedOn;
+  private Customer customer1;
+  private Date openedOn;
+  private Collection<? extends OrderDetail> orderDetailCollection;
+  private OrderPK orderPK;
+  private String status;
+  private BigDecimal total;
+  private Short uniqueProducts;
 
-  Customer getCustomer1();
+  public Order() {}
 
-  Date getOpenedOn();
+  public Date getClosedOn() {
+    return closedOn;
+  }
 
-  Collection getOrderDetailCollection();
+  public Customer getCustomer1() {
+    return customer1;
+  }
 
-  OrderPK getOrderPK();
+  public Date getOpenedOn() {
+    return openedOn;
+  }
 
-  String getStatus();
+  public Collection<? extends OrderDetail> getOrderDetailCollection() {
+    return orderDetailCollection;
+  }
 
-  BigDecimal getTotal();
+  public OrderPK getOrderPK() {
+    return orderPK;
+  }
 
-  Short getUniqueProducts();
+  public String getStatus() {
+    return status;
+  }
 
-  void setClosedOn(Date closedOn);
+  public BigDecimal getTotal() {
+    return total;
+  }
 
-  void setOpenedOn(Date openedOn);
+  public Short getUniqueProducts() {
+    return uniqueProducts;
+  }
 
-  void setStatus(String status);
+  public void setClosedOn(Date closedOn) {
+    this.closedOn = closedOn;
+  }
 
-  void setTotal(BigDecimal total);
+  public void setOpenedOn(Date openedOn) {
+    this.openedOn = openedOn;
+  }
 
-  void setUniqueProducts(Short uniqueProducts);
+  public void setStatus(String status) {
+    this.status = status;
+  }
+
+  public void setTotal(BigDecimal total) {
+    this.total = total;
+  }
+
+  public void setUniqueProducts(Short uniqueProducts) {
+    this.uniqueProducts = uniqueProducts;
+  }
+
+  public void setCustomer1(Customer customer1) {
+    this.customer1 = customer1;
+  }
+
+  public void setOrderPK(OrderPK orderPK) {
+    this.orderPK = orderPK;
+  }
 
 }

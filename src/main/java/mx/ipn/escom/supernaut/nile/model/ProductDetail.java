@@ -8,16 +8,45 @@ package mx.ipn.escom.supernaut.nile.model;
  *
  * @author supernaut
  */
-public interface ProductDetail {
+public class ProductDetail {
 
-  Attribute getAttribute1();
+  private Product product1;
+  private Attribute attribute1;
+  private ProductDetailPK productDetailPK;
+  private String value;
 
-  Product getProduct1();
+  public ProductDetail() {}
 
-  ProductDetailPK getProductDetailPK();
+  public Attribute getAttribute1() {
+    return attribute1;
+  }
 
-  String getValue();
+  public Product getProduct1() {
+    return product1;
+  }
 
-  void setValue(String value);
+  public ProductDetailPK getProductDetailPK() {
+    return productDetailPK;
+  }
+
+  public String getValue() {
+    return value;
+  }
+
+  public void setProduct1(Product product1) {
+    this.product1 = product1;
+  }
+
+  public void setAttribute1(Attribute attribute1) {
+    this.attribute1 = attribute1;
+  }
+
+  public void setProductDetailPK(ProductDetailPK productDetailPK) {
+    this.productDetailPK = productDetailPK;
+  }
+
+  public void setValue(String value) {
+    this.value = value;
+  }
 
 }

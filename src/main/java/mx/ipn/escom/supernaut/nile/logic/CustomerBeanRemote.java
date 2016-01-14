@@ -20,6 +20,6 @@ public interface CustomerBeanRemote extends
 
   public boolean initWithLogin(String username, String pword);
 
-  public Order addOrder() throws IllegalStateException;
+  public void addOrder(Order order) throws IllegalStateException;
 
 }

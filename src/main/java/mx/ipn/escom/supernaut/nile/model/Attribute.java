@@ -10,24 +10,55 @@ import java.util.Collection;
  *
  * @author supernaut
  */
-public interface Attribute {
+public class Attribute {
 
-  Integer getAttributeId();
+  private Integer attributeId;
+  private Collection<? extends CategoryDetail> categoryDetailCollection;
+  private String description;
+  private Magnitude magni;
+  private String name;
+  private Collection<? extends ProductDetail> productDetailCollection;
 
-  Collection getCategoryDetailCollection();
+  public Attribute() {}
 
-  String getDescription();
+  public Integer getAttributeId() {
+    return attributeId;
+  }
 
-  Magnitude getMagni();
+  public Collection<? extends CategoryDetail> getCategoryDetailCollection() {
+    return categoryDetailCollection;
+  }
 
-  String getName();
+  public String getDescription() {
+    return description;
+  }
 
-  Collection getProductDetailCollection();
+  public Magnitude getMagni() {
+    return magni;
+  }
 
-  void setDescription(String description);
+  public String getName() {
+    return name;
+  }
 
-  void setMagni(Magnitude magni);
+  public Collection<? extends ProductDetail> getProductDetailCollection() {
+    return productDetailCollection;
+  }
 
-  void setName(String name);
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public void setMagni(Magnitude magni) {
+    this.magni = magni;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public void setAttributeId(Integer attributeId) {
+    this.attributeId = attributeId;
+  }
 
 }

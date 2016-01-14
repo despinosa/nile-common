@@ -8,26 +8,63 @@ package mx.ipn.escom.supernaut.nile.model;
  *
  * @author supernaut
  */
-public interface Address {
+public class Address {
 
-  AddressPK getAddressPK();
+  private AddressPK addressPK;
+  private Customer customer1;
+  private String line1;
+  private String line2;
+  private Integer postcode;
+  private String state;
 
-  Customer getCustomer1();
+  public Address() {}
 
-  String getLine1();
+  public AddressPK getAddressPK() {
+    return addressPK;
+  }
 
-  String getLine2();
+  public Customer getCustomer1() {
+    return customer1;
+  }
 
-  Integer getPostcode();
+  public String getLine1() {
+    return line1;
+  }
 
-  String getState();
+  public String getLine2() {
+    return line2;
+  }
 
-  void setLine1(String line1);
+  public Integer getPostcode() {
+    return postcode;
+  }
 
-  void setLine2(String line2);
+  public String getState() {
+    return state;
+  }
 
-  void setPostcode(Integer postcode);
+  public void setLine1(String line1) {
+    this.line1 = line1;
+  }
 
-  void setState(String state);
+  public void setLine2(String line2) {
+    this.line2 = line2;
+  }
+
+  public void setPostcode(Integer postcode) {
+    this.postcode = postcode;
+  }
+
+  public void setState(String state) {
+    this.state = state;
+  }
+
+  public void setAddressPK(AddressPK addressPK) {
+    this.addressPK = addressPK;
+  }
+
+  public void setCustomer1(Customer customer1) {
+    this.customer1 = customer1;
+  }
 
 }

@@ -10,20 +10,46 @@ import java.util.Collection;
  *
  * @author supernaut
  */
-public interface Category {
+public class Category {
 
-  Collection getCategoryDetailCollection();
+  private Collection<? extends CategoryDetail> categoryDetailCollection;
+  private Short categoryId;
+  private String description;
+  private String name;
+  private Collection<? extends Product> productCollection;
 
-  Short getCategoryId();
+  public Category() {}
 
-  String getDescription();
+  public Collection<? extends CategoryDetail> getCategoryDetailCollection() {
+    return categoryDetailCollection;
+  }
 
-  String getName();
+  public Short getCategoryId() {
+    return categoryId;
+  }
 
-  Collection getProductCollection();
+  public String getDescription() {
+    return description;
+  }
 
-  void setDescription(String description);
+  public String getName() {
+    return name;
+  }
 
-  void setName(String name);
+  public Collection<? extends Product> getProductCollection() {
+    return productCollection;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public void setCategoryId(Short categoryId) {
+    this.categoryId = categoryId;
+  }
 
 }

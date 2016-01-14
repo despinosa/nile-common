@@ -9,16 +9,45 @@ package mx.ipn.escom.supernaut.nile.model;
  *
  * @author supernaut
  */
-public interface CategoryDetail {
+public class CategoryDetail {
 
-  Attribute getAttribute1();
+  private Attribute attribute1;
+  private Category category1;
+  private CategoryDetailPK categoryDetailPK;
+  private Unit unit;
 
-  Category getCategory1();
+  public CategoryDetail() {}
 
-  CategoryDetailPK getCategoryDetailPK();
+  public Attribute getAttribute1() {
+    return attribute1;
+  }
 
-  Unit getUnit();
+  public Category getCategory1() {
+    return category1;
+  }
 
-  void setUnit(Unit unit);
+  public CategoryDetailPK getCategoryDetailPK() {
+    return categoryDetailPK;
+  }
+
+  public Unit getUnit() {
+    return unit;
+  }
+
+  public void setUnit(Unit unit) {
+    this.unit = unit;
+  }
+
+  public void setAttribute1(Attribute attribute1) {
+    this.attribute1 = attribute1;
+  }
+
+  public void setCategory1(Category category1) {
+    this.category1 = category1;
+  }
+
+  public void setCategoryDetailPK(CategoryDetailPK categoryDetailPK) {
+    this.categoryDetailPK = categoryDetailPK;
+  }
 
 }
