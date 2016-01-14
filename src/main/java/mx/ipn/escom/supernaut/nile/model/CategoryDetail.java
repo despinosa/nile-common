@@ -19,8 +19,6 @@ public interface CategoryDetail {
 
   Unit getUnit();
 
-  void setCategoryDetailPK(CategoryDetailPK categoryDetailPK);
-
   void setUnit(Unit unit);
 
 }

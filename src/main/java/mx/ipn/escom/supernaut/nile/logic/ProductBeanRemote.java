@@ -4,22 +4,16 @@
  */
 package mx.ipn.escom.supernaut.nile.logic;
 
+import java.util.List;
 import javax.ejb.Remote;
-import mx.ipn.escom.supernaut.nile.model.Customer;
-import mx.ipn.escom.supernaut.nile.model.Order;
+import mx.ipn.escom.supernaut.nile.model.Category;
+import mx.ipn.escom.supernaut.nile.model.Product;
 
 /**
  *
  * @author supernaut
  */
 @Remote
-public interface CustomerBeanRemote extends
-    AbstractBeanRemote<Integer, Customer> {
-
-  void initByUsername(String username);
-
-  Order addOrder();
-
-  boolean validatePword(String pword);
+public interface ProductBeanRemote extends AbstractBeanRemote<Integer, Product> {
 
 }

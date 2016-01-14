@@ -5,21 +5,13 @@
 package mx.ipn.escom.supernaut.nile.logic;
 
 import javax.ejb.Remote;
-import mx.ipn.escom.supernaut.nile.model.Customer;
-import mx.ipn.escom.supernaut.nile.model.Order;
+import mx.ipn.escom.supernaut.nile.model.Category;
 
 /**
  *
  * @author supernaut
  */
 @Remote
-public interface CustomerBeanRemote extends
-    AbstractBeanRemote<Integer, Customer> {
-
-  void initByUsername(String username);
-
-  Order addOrder();
-
-  boolean validatePword(String pword);
-
+public interface CategoryBeanRemote extends
+    AbstractBeanRemote<Integer, Category> {
 }
