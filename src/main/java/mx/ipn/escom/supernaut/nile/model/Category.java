@@ -12,17 +12,12 @@ import java.util.Collection;
  */
 public class Category {
 
-  private Collection<? extends CategoryDetail> categoryDetailCollection;
   private Short categoryId;
   private String description;
   private String name;
   private Collection<? extends Product> productCollection;
 
   public Category() {}
-
-  public Collection<? extends CategoryDetail> getCategoryDetailCollection() {
-    return categoryDetailCollection;
-  }
 
   public Short getCategoryId() {
     return categoryId;

@@ -14,7 +14,6 @@ import java.util.Date;
 public class Customer {
 
   private Date addedOn;
-  private Collection<? extends Address> addressCollection;
   private Integer customerId;
   private String firstName;
   private Date lastLogin;
@@ -28,10 +27,6 @@ public class Customer {
 
   public Date getAddedOn() {
     return addedOn;
-  }
-
-  public Collection<? extends Address> getAddressCollection() {
-    return addressCollection;
   }
 
   public Integer getCustomerId() {
