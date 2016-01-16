@@ -20,10 +20,10 @@ public interface AbstractBeanInterface<PK, Model> {
 
   public List<Model> getAll();
 
-  public Model getModel() throws IllegalStateException;
+  public Model getModel();
 
-  public void deleteModel(PK pk);
+  public void deleteModel();
 
-  public void commitModel() throws IllegalStateException;
+  public void commitModel();
 
 }
