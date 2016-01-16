@@ -21,6 +21,7 @@ public class Product {
   private String name;
   private Collection<? extends OrderDetail> orderDetailCollection;
   private BigDecimal price;
+  private Collection<? extends ProductDetail> productDetailCollection;
   private Integer sku;
   private int stock;
 
@@ -52,6 +53,10 @@ public class Product {
 
   public BigDecimal getPrice() {
     return price;
+  }
+
+  public Collection<? extends ProductDetail> getProductDetailCollection() {
+    return productDetailCollection;
   }
 
   public Integer getSku() {

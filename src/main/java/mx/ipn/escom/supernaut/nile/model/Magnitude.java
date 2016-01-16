@@ -10,34 +10,34 @@ import java.util.Collection;
  *
  * @author supernaut
  */
-public class Category {
+public class Magnitude {
 
-  private Collection<? extends CategoryDetail> categoryDetailCollection;
-  private Short categoryId;
+  private Collection<? extends Attribute> attributeCollection;
   private String description;
+  private Short magniId;
   private String name;
-  private Collection<? extends Product> productCollection;
+  private Collection<? extends Unit> unitCollection;
 
-  public Category() {}
+  public Magnitude() {}
 
-  public Collection<? extends CategoryDetail> getCategoryDetailCollection() {
-    return categoryDetailCollection;
-  }
-
-  public Short getCategoryId() {
-    return categoryId;
+  public Collection<? extends Attribute> getAttributeCollection() {
+    return attributeCollection;
   }
 
   public String getDescription() {
     return description;
   }
 
+  public Short getMagniId() {
+    return magniId;
+  }
+
   public String getName() {
     return name;
   }
 
-  public Collection<? extends Product> getProductCollection() {
-    return productCollection;
+  public Collection<? extends Unit> getUnitCollection() {
+    return unitCollection;
   }
 
   public void setDescription(String description) {
@@ -48,8 +48,8 @@ public class Category {
     this.name = name;
   }
 
-  public void setCategoryId(Short categoryId) {
-    this.categoryId = categoryId;
+  public void setMagniId(Short magniId) {
+    this.magniId = magniId;
   }
 
 }

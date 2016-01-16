@@ -10,46 +10,55 @@ import java.util.Collection;
  *
  * @author supernaut
  */
-public class Category {
+public class Attribute {
 
+  private Integer attributeId;
   private Collection<? extends CategoryDetail> categoryDetailCollection;
-  private Short categoryId;
   private String description;
+  private Magnitude magni;
   private String name;
-  private Collection<? extends Product> productCollection;
+  private Collection<? extends ProductDetail> productDetailCollection;
 
-  public Category() {}
+  public Attribute() {}
+
+  public Integer getAttributeId() {
+    return attributeId;
+  }
 
   public Collection<? extends CategoryDetail> getCategoryDetailCollection() {
     return categoryDetailCollection;
-  }
-
-  public Short getCategoryId() {
-    return categoryId;
   }
 
   public String getDescription() {
     return description;
   }
 
+  public Magnitude getMagni() {
+    return magni;
+  }
+
   public String getName() {
     return name;
   }
 
-  public Collection<? extends Product> getProductCollection() {
-    return productCollection;
+  public Collection<? extends ProductDetail> getProductDetailCollection() {
+    return productDetailCollection;
   }
 
   public void setDescription(String description) {
     this.description = description;
   }
 
+  public void setMagni(Magnitude magni) {
+    this.magni = magni;
+  }
+
   public void setName(String name) {
     this.name = name;
   }
 
-  public void setCategoryId(Short categoryId) {
-    this.categoryId = categoryId;
+  public void setAttributeId(Integer attributeId) {
+    this.attributeId = attributeId;
   }
 
 }
