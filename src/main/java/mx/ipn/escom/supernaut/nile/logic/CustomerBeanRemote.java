@@ -14,12 +14,15 @@ import mx.ipn.escom.supernaut.nile.model.Order;
  */
 @Remote
 public interface CustomerBeanRemote extends
-    AbstractBeanInterface<Integer, Customer> {
+    CommonBeanInterface<Integer, Customer> {
 
   public void initByUsername(String username);
 
   public boolean initWithLogin(String username, String pword);
 
-  public void addOrder(Order order) throws IllegalStateException;
+  @Override
+  public void initNew(Customer customer);
+
+  public void addOrder(Order order);
 
 }

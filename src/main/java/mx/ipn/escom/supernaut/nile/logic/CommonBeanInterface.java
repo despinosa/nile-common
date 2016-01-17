@@ -12,7 +12,7 @@ import java.util.List;
  * @param <PK>
  * @param <Model>
  */
-public interface AbstractBeanInterface<PK, Model> {
+public interface CommonBeanInterface<PK, Model> {
 
   public void initByPK(PK pk);
 

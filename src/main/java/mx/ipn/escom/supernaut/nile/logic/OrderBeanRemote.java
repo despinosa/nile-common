@@ -14,9 +14,8 @@ import mx.ipn.escom.supernaut.nile.model.Product;
  * @author supernaut
  */
 @Remote
-public interface OrderBeanRemote extends AbstractBeanInterface<OrderPK, Order> {
+public interface OrderBeanRemote extends CommonBeanInterface<OrderPK, Order> {
 
-  public void addProduct(Product product, int quantity)
-      throws IllegalStateException;
+  public void addProduct(Product product, int quantity);
 
 }
