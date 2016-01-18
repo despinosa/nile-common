@@ -14,7 +14,6 @@ public class CategoryDetail {
   private Attribute attribute1;
   private Category category1;
   private CategoryDetailPK categoryDetailPK;
-  private Unit unit;
 
   public CategoryDetail() {}
 
@@ -28,14 +27,6 @@ public class CategoryDetail {
 
   public CategoryDetailPK getCategoryDetailPK() {
     return categoryDetailPK;
-  }
-
-  public Unit getUnit() {
-    return unit;
-  }
-
-  public void setUnit(Unit unit) {
-    this.unit = unit;
   }
 
   public void setAttribute1(Attribute attribute1) {

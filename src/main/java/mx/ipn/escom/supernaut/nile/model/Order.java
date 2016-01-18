@@ -14,10 +14,32 @@ import java.util.Date;
  */
 public class Order {
 
+  public enum Status {
+    PENDING("pendiente"), COMPLETED("completada"), CANCELLED("cancelada"), SHIPPED(
+        "enviada"), DELIVERED("entregada");
+    private final String value;
+
+    Status(String value) {
+      this.value = value;
+    }
+
+    @Override
+    public String toString() {
+      return value;
+    }
+
+    public static boolean contains(String test) {
+      for (Status status : Status.values())
+        if (status.value == null ? test == null : status.value.equals(test))
+          return true;
+      return false;
+    }
+  }
+
   private Date closedOn;
   private Customer customer1;
   private Date openedOn;
-  private Collection<? extends OrderDetail> orderDetailCollection;
+  private Collection orderDetailCollection;
   private OrderPK orderPK;
   private String status;
   private BigDecimal total;
@@ -37,7 +59,7 @@ public class Order {
     return openedOn;
   }
 
-  public Collection<? extends OrderDetail> getOrderDetailCollection() {
+  public Collection getOrderDetailCollection() {
     return orderDetailCollection;
   }
 
@@ -66,6 +88,8 @@ public class Order {
   }
 
   public void setStatus(String status) {
+    if (!Status.contains(status))
+      throw new IllegalArgumentException();
     this.status = status;
   }
 

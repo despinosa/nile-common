@@ -26,6 +26,10 @@ public class OrderDetail {
     return orderDetailPK;
   }
 
+  public void setOrderDetailPK(OrderDetailPK orderDetailPK) {
+    this.orderDetailPK = orderDetailPK;
+  }
+
   public Product getProduct1() {
     return product1;
   }

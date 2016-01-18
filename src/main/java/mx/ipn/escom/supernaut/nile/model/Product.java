@@ -15,13 +15,13 @@ import java.util.Date;
 public class Product {
 
   private Date addedOn;
-  private Collection<? extends Category> categoryCollection;
+  private Collection categoryCollection;
   private String description;
   private byte[] image;
   private String name;
-  private Collection<? extends OrderDetail> orderDetailCollection;
+  private Collection orderDetailCollection;
   private BigDecimal price;
-  private Collection<? extends ProductDetail> productDetailCollection;
+  private Collection productDetailCollection;
   private Integer sku;
   private int stock;
 
@@ -31,7 +31,7 @@ public class Product {
     return addedOn;
   }
 
-  public Collection<? extends Category> getCategoryCollection() {
+  public Collection getCategoryCollection() {
     return categoryCollection;
   }
 
@@ -47,7 +47,7 @@ public class Product {
     return name;
   }
 
-  public Collection<? extends OrderDetail> getOrderDetailCollection() {
+  public Collection getOrderDetailCollection() {
     return orderDetailCollection;
   }
 
@@ -55,7 +55,7 @@ public class Product {
     return price;
   }
 
-  public Collection<? extends ProductDetail> getProductDetailCollection() {
+  public Collection getProductDetailCollection() {
     return productDetailCollection;
   }
 

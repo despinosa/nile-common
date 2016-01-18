@@ -13,11 +13,10 @@ import java.util.Collection;
 public class Attribute {
 
   private Integer attributeId;
-  private Collection<? extends CategoryDetail> categoryDetailCollection;
+  private Collection categoryDetailCollection;
   private String description;
-  private Magnitude magni;
   private String name;
-  private Collection<? extends ProductDetail> productDetailCollection;
+  private Collection productDetailCollection;
 
   public Attribute() {}
 
@@ -25,7 +24,7 @@ public class Attribute {
     return attributeId;
   }
 
-  public Collection<? extends CategoryDetail> getCategoryDetailCollection() {
+  public Collection getCategoryDetailCollection() {
     return categoryDetailCollection;
   }
 
@@ -33,24 +32,16 @@ public class Attribute {
     return description;
   }
 
-  public Magnitude getMagni() {
-    return magni;
-  }
-
   public String getName() {
     return name;
   }
 
-  public Collection<? extends ProductDetail> getProductDetailCollection() {
+  public Collection getProductDetailCollection() {
     return productDetailCollection;
   }
 
   public void setDescription(String description) {
     this.description = description;
-  }
-
-  public void setMagni(Magnitude magni) {
-    this.magni = magni;
   }
 
   public void setName(String name) {

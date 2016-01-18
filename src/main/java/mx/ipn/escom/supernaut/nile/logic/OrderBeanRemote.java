@@ -6,6 +6,7 @@ package mx.ipn.escom.supernaut.nile.logic;
 
 import javax.ejb.Remote;
 import mx.ipn.escom.supernaut.nile.model.Order;
+import mx.ipn.escom.supernaut.nile.model.OrderDetail;
 import mx.ipn.escom.supernaut.nile.model.OrderPK;
 import mx.ipn.escom.supernaut.nile.model.Product;
 
@@ -16,6 +17,8 @@ import mx.ipn.escom.supernaut.nile.model.Product;
 @Remote
 public interface OrderBeanRemote extends CommonBeanInterface<OrderPK, Order> {
 
-  public void addProduct(Product product, int quantity);
+  public void addProduct(Product product, short quantity);
+
+    void addOrderDetail(OrderDetail orderDetail);
 
 }

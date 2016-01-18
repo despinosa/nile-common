@@ -5,6 +5,7 @@
 package mx.ipn.escom.supernaut.nile.logic;
 
 import javax.ejb.Remote;
+import mx.ipn.escom.supernaut.nile.model.Address;
 import mx.ipn.escom.supernaut.nile.model.Customer;
 import mx.ipn.escom.supernaut.nile.model.Order;
 
@@ -20,9 +21,10 @@ public interface CustomerBeanRemote extends
 
   public boolean initWithLogin(String username, String pword);
 
-  @Override
-  public void initNew(Customer customer);
-
   public void addOrder(Order order);
+
+  public void setShippingAddress(Address address);
+
+  void setBillingAddress(Address address);
 
 }

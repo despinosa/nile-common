@@ -5,6 +5,7 @@
 package mx.ipn.escom.supernaut.nile.logic;
 
 import javax.ejb.Remote;
+import mx.ipn.escom.supernaut.nile.model.Attribute;
 import mx.ipn.escom.supernaut.nile.model.Category;
 import mx.ipn.escom.supernaut.nile.model.Product;
 
@@ -17,5 +18,7 @@ public interface ProductBeanRemote extends
     CommonBeanInterface<Integer, Product> {
 
   public void addCategory(Category category);
+
+    void addAttribute(Attribute attribute, String value);
 
 }

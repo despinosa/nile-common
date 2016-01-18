@@ -12,15 +12,15 @@ import java.util.Collection;
  */
 public class Category {
 
-  private Collection<? extends CategoryDetail> categoryDetailCollection;
+  private Collection categoryDetailCollection;
   private Short categoryId;
   private String description;
   private String name;
-  private Collection<? extends Product> productCollection;
+  private Collection productCollection;
 
   public Category() {}
 
-  public Collection<? extends CategoryDetail> getCategoryDetailCollection() {
+  public Collection getCategoryDetailCollection() {
     return categoryDetailCollection;
   }
 
@@ -36,7 +36,7 @@ public class Category {
     return name;
   }
 
-  public Collection<? extends Product> getProductCollection() {
+  public Collection getProductCollection() {
     return productCollection;
   }
 

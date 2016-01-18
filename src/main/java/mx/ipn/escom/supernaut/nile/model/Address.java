@@ -10,6 +10,27 @@ package mx.ipn.escom.supernaut.nile.model;
  */
 public class Address {
 
+  public enum Type {
+    SHIPPING("envío"), BILLING("facturación");
+    private final String value;
+
+    Type(String value) {
+      this.value = value;
+    }
+
+    @Override
+    public String toString() {
+      return value;
+    }
+
+    public static boolean contains(String test) {
+      for (Type type : Type.values())
+        if (type.value == null ? test == null : type.value.equals(test))
+          return true;
+      return false;
+    }
+  }
+
   private AddressPK addressPK;
   private Customer customer1;
   private String line1;

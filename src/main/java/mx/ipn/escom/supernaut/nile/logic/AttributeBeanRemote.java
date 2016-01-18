@@ -8,18 +8,17 @@ import javax.ejb.Remote;
 import mx.ipn.escom.supernaut.nile.model.Attribute;
 import mx.ipn.escom.supernaut.nile.model.Category;
 import mx.ipn.escom.supernaut.nile.model.CategoryDetail;
-import mx.ipn.escom.supernaut.nile.model.Product;
 
 /**
  *
  * @author supernaut
  */
 @Remote
-public interface CategoryBeanRemote extends
-    CommonBeanInterface<Short, Category> {
-  public void addProduct(Product product);
+public interface AttributeBeanRemote extends
+    CommonBeanInterface<Integer, Attribute> {
 
     void addCategoryDetail(CategoryDetail categoryDetail);
 
-    void addAttribute(Attribute attribute);
+    void addCategory(Category category);
+
 }

@@ -14,12 +14,12 @@ import java.util.Date;
 public class Customer {
 
   private Date addedOn;
-  private Collection<? extends Address> addressCollection;
+  private Collection addressCollection;
   private Integer customerId;
   private String firstName;
   private Date lastLogin;
   private String lastName;
-  private Collection<? extends Order> orderCollection;
+  private Collection orderCollection;
   private String pwordHash;
   private String pwordSalt;
   private String username;
@@ -30,7 +30,7 @@ public class Customer {
     return addedOn;
   }
 
-  public Collection<? extends Address> getAddressCollection() {
+  public Collection getAddressCollection() {
     return addressCollection;
   }
 
@@ -50,7 +50,7 @@ public class Customer {
     return lastName;
   }
 
-  public Collection<? extends Order> getOrderCollection() {
+  public Collection getOrderCollection() {
     return orderCollection;
   }
 
